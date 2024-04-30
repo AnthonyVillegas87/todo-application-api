@@ -1,5 +1,6 @@
 package com.encypher.rest.webservices.todoapplicationapi.controller;
 
+import com.encypher.rest.webservices.todoapplicationapi.repository.TodoRepository;
 import com.encypher.rest.webservices.todoapplicationapi.service.TodoService;
 import com.encypher.rest.webservices.todoapplicationapi.user.Todo;
 import org.springframework.http.ResponseEntity;
@@ -7,12 +8,14 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-//@RestController
-public class ToDoResource {
+@RestController
+public class TodoJpaResource {
     private TodoService todoService;
+    private TodoRepository todoRepository;
 
-    public ToDoResource(TodoService todoService) {
+    public TodoJpaResource(TodoService todoService, TodoRepository todoRepository) {
        this.todoService = todoService;
+       this.todoRepository = todoRepository;
     }
 
     @GetMapping("/users/{username}/todos")

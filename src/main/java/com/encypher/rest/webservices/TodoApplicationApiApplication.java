@@ -1,4 +1,4 @@
-package com.encypher.rest.webservices.todoapplicationapi;
+package com.encypher.rest.webservices;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -11,7 +11,7 @@ public class Todo {
 
     @Id
     @GeneratedValue
-    private int id;
+    private Integer id;
 
     private String username;
     private String description;
@@ -21,7 +21,7 @@ public class Todo {
 
     public Todo() {}
 
-    public Todo(int id, String username, String description, LocalDate targetDate, boolean done) {
+    public Todo(Integer id, String username, String description, LocalDate targetDate, boolean done) {
         this.id = id;
         this.username = username;
         this.description = description;
@@ -29,11 +29,11 @@ public class Todo {
         this.done = done;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
